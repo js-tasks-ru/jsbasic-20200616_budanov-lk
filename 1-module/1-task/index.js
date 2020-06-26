@@ -14,8 +14,5 @@ let a = factorial(0);
 let b = factorial(1);
 let c = factorial(3);
 let d = factorial(5);
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+
 
