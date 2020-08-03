@@ -6,6 +6,7 @@ export default class ProductCard {
   constructor(product) {
    
     this.elem.classList.add('card');
+    
 
     let div1 = document.createElement('div');
     div1.classList.add('card__top');
@@ -43,9 +44,9 @@ export default class ProductCard {
     div2.appendChild(button);
     this.elem.append(div2);
     
-    
-    button.onclick = function() {
-      button.dispatchEvent(new CustomEvent('product-add', {
+    let cardButton = this.elem.querySelector('.card__button');
+    cardButton.onclick = function() {
+      cardButton.dispatchEvent(new CustomEvent('product-add', {
         detail: product.id,
         bubbles: true
       }));
@@ -55,3 +56,4 @@ export default class ProductCard {
   
 
 }
+
